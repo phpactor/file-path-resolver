@@ -18,7 +18,7 @@ class TokenExpanderBench
      */
     private $tokenExpander;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $expanders = new Expanders([
             new ValueExpander('a', 'A'),

@@ -22,7 +22,7 @@ class XdgExpanderTest extends TestCase
      */
     private $xdg;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->xdg = $this->prophesize(Xdg::class);
         $this->xdg->getHomeDataDir()->willReturn('/home/data');
