@@ -13,10 +13,11 @@
         "webmozart/path-util": "^2.3"
     },
     "require-dev": {
+        "ergebnis/composer-normalize": "^2.0",
+        "friendsofphp/php-cs-fixer": "^2.17",
         "phpbench/phpbench": "^0.14.0",
         "phpstan/phpstan": "~0.12.0",
         "phpunit/phpunit": "~7.0",
-        "friendsofphp/php-cs-fixer": "~2.15.0",
         "psr/log": "^1.1"
     },
     "autoload": {
@@ -28,5 +29,7 @@
         "psr-4": {
             "Phpactor\\FilePathResolver\\Tests\\": "tests/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
