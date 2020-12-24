@@ -13,7 +13,7 @@ class SuffixExpanderDecoratorTest extends ExpanderTestCase
      */
     private $expander;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->expander = $this->prophesize(Expander::class);
     }
