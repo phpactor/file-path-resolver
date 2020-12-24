@@ -13,7 +13,7 @@ class CachingPathResolverTest extends TestCase
      */
     private $resolver;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->resolver = $this->prophesize(PathResolver::class);
     }
