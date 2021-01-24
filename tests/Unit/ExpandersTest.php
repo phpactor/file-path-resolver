@@ -9,7 +9,7 @@ use Phpactor\FilePathResolver\Expanders;
 
 class ExpandersTest extends TestCase
 {
-    public function testProvidesArrayRepresentation()
+    public function testProvidesArrayRepresentation(): void
     {
         $expanders = new Expanders([
             new ValueExpander('foo', 'bar'),
@@ -22,7 +22,7 @@ class ExpandersTest extends TestCase
         ], $expanders->toArray());
     }
 
-    public function testThrowsExceptionIfUnknownTokenFound()
+    public function testThrowsExceptionIfUnknownTokenFound(): void
     {
         $this->expectException(UnknownToken::class);
         $expanders = new Expanders([

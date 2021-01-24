@@ -9,7 +9,7 @@ use Psr\Log\LoggerInterface;
 
 class LoggingPathResolverTest extends TestCase
 {
-    public function testLogsResolvedPath()
+    public function testLogsResolvedPath(): void
     {
         $innerResolver = $this->prophesize(PathResolver::class);
         $logger = $this->prophesize(LoggerInterface::class);

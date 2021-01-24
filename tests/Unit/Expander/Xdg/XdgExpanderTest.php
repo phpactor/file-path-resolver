@@ -36,7 +36,7 @@ class XdgExpanderTest extends TestCase
         ]));
     }
 
-    public function testExpandXdgDirs()
+    public function testExpandXdgDirs(): void
     {
         $this->assertEquals('/home/cache/foo', $this->expander->apply('%cache%/foo'));
         $this->assertEquals('/home/data/foo', $this->expander->apply('%data%/foo'));

@@ -18,7 +18,7 @@ class TokenExpanderBench
      */
     private $tokenExpander;
 
-    public function setUp()
+    public function setUp(): void
     {
         $expanders = new Expanders([
             new ValueExpander('a', 'A'),
@@ -31,12 +31,12 @@ class TokenExpanderBench
         $this->tokenExpander = new TokenExpandingFilter($expanders);
     }
 
-    public function benchExpandTokenizedString()
+    public function benchExpandTokenizedString(): void
     {
         $this->tokenExpander->apply('%a%/%b%/%c%/%d%/%e%');
     }
 
-    public function benchExpandStringWithNoTokens()
+    public function benchExpandStringWithNoTokens(): void
     {
         $this->tokenExpander->apply('a/b/c/d/e');
     }

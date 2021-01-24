@@ -23,7 +23,7 @@ class SuffixExpanderDecoratorTest extends ExpanderTestCase
         return new SuffixExpanderDecorator($this->expander->reveal(), '/foo');
     }
 
-    public function testAddsSuffixToInnerExpanderValue()
+    public function testAddsSuffixToInnerExpanderValue(): void
     {
         $this->expander->tokenName()->willReturn('bar');
         $this->expander->replacementValue()->willReturn('bar');

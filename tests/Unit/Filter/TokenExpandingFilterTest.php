@@ -9,12 +9,12 @@ use Phpactor\FilePathResolver\Filter\TokenExpandingFilter;
 
 class TokenExpandingFilterTest extends TestCase
 {
-    public function testIdentity()
+    public function testIdentity(): void
     {
         $this->assertEquals('/foo', $this->create()->apply('/foo'));
     }
 
-    public function testAppliesExpanders()
+    public function testAppliesExpanders(): void
     {
         $expander1 = $this->prophesize(Expander::class);
         $expander2 = $this->prophesize(Expander::class);
