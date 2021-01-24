@@ -9,14 +9,14 @@ use Phpactor\FilePathResolver\PathResolver;
 
 class FilteringPathResolverTest extends TestCase
 {
-    public function testIdentity()
+    public function testIdentity(): void
     {
         $resolver = new FilteringPathResolver();
         $this->assertInstanceOf(PathResolver::class, $resolver);
         $this->assertEquals('/foo/bar', $resolver->resolve('/foo/bar'));
     }
 
-    public function testAppliesFilters()
+    public function testAppliesFilters(): void
     {
         $filter1 = $this->prophesize(Filter::class);
         $filter2 = $this->prophesize(Filter::class);

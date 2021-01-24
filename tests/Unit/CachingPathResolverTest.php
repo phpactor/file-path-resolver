@@ -18,7 +18,7 @@ class CachingPathResolverTest extends TestCase
         $this->resolver = $this->prophesize(PathResolver::class);
     }
 
-    public function testCachesResult()
+    public function testCachesResult(): void
     {
         $caching = new CachingPathResolver($this->resolver->reveal());
         $this->resolver->resolve('foo')->willReturn('bar')->shouldBeCalledOnce();

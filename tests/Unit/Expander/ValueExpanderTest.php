@@ -12,7 +12,7 @@ class ValueExpanderTest extends ExpanderTestCase
         return new ValueExpander('test', 'value');
     }
 
-    public function testExpandsValue()
+    public function testExpandsValue(): void
     {
         $this->assertEquals('/foo/value/bar', $this->expand('/foo/%test%/bar'));
     }

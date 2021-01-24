@@ -8,10 +8,9 @@ use Phpactor\FilePathResolver\FilteringPathResolver;
 
 abstract class FilterTestCase extends TestCase
 {
-    abstract protected function createFilter(): Filter;
-
     public function apply(string $path): string
     {
         return (new FilteringPathResolver([ $this->createFilter() ]))->resolve($path);
     }
+    abstract protected function createFilter(): Filter;
 }

@@ -13,6 +13,13 @@ class Expanders implements IteratorAggregate
      */
     private $expanders = [];
 
+    public function __construct(array $expanders)
+    {
+        foreach ($expanders as $expander) {
+            $this->add($expander);
+        }
+    }
+
     public function toArray(): array
     {
         $array = [];
@@ -21,13 +28,6 @@ class Expanders implements IteratorAggregate
         }
 
         return $array;
-    }
-
-    public function __construct(array $expanders)
-    {
-        foreach ($expanders as $expander) {
-            $this->add($expander);
-        }
     }
 
     public function get(string $tokenName)
@@ -47,7 +47,7 @@ class Expanders implements IteratorAggregate
         return new ArrayIterator($this->expanders);
     }
 
-    private function add(Expander $expander)
+    private function add(Expander $expander): void
     {
         $this->expanders[$expander->tokenName()] = $expander;
     }
