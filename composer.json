@@ -11,12 +11,12 @@
     "require": {
         "dnoegel/php-xdg-base-dir": "^0.1.0",
         "webmozart/path-util": "^2.3",
-        "php": "^7.3"
+        "php": "^7.3 || ^8.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.0",
         "friendsofphp/php-cs-fixer": "^2.17",
-        "phpbench/phpbench": "^1.0.0-alpha5",
+        "phpbench/phpbench": "dev-master",
         "phpstan/phpstan": "~0.12.0",
         "phpunit/phpunit": "^9.0",
         "psr/log": "^1.1",
