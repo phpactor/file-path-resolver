@@ -16,7 +16,7 @@
     "require-dev": {
         "ergebnis/composer-normalize": "^2.0",
         "friendsofphp/php-cs-fixer": "^2.17",
-        "phpbench/phpbench": "dev-master",
+        "phpbench/phpbench": "^1.0@alpha",
         "phpstan/phpstan": "~0.12.0",
         "phpunit/phpunit": "^9.0",
         "psr/log": "^1.1",
